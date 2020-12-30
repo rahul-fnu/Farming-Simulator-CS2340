@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" minHeight="500.0" minWidth="500.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farmui.controllers.ControllerConfigUI">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <VBox prefHeight="500.0" prefWidth="500.0" spacing="10.0">
+         <children>
+            <HBox prefHeight="0.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label fx:id="nameID" text="Enter Player Name!" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameTextField" alignment="TOP_CENTER" onAction="#typeText" promptText="Name">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></TextField>
+                  <Button fx:id="nameSubmit" mnemonicParsing="false" onAction="#submitName" text="Submit" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="20.0" prefHeight="0.0" prefWidth="200.0" spacing="6.0">
+               <children>
+                  <Label text="Choose the Difficulty!" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <MenuButton fx:id="menuButtonD" alignment="CENTER" mnemonicParsing="false" prefWidth="150.0" text="Difficulty">
+                    <items>
+                      <MenuItem fx:id="easy" mnemonicParsing="false" onAction="#selectMenuEasy" text="Easy" />
+                      <MenuItem fx:id="medium" mnemonicParsing="false" onAction="#selectMenuMedium" text="Medium" />
+                        <MenuItem fx:id="hard" mnemonicParsing="false" onAction="#selectMenuHard" text="Hard" />
+                    </items>
+                  </MenuButton>
+                  <Button fx:id="difficultySubmit" mnemonicParsing="false" onAction="#submitDifficulty" text="Submit" translateX="13.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="20.0" prefHeight="0.0" prefWidth="200.0" spacing="26.0">
+               <children>
+                  <Label fx:id="name_id1" text="Select your Seed!" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <MenuButton fx:id="menuButtonS" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="150.0" text="Choose a Seed" textAlignment="CENTER" translateX="7.0">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#selectSunflower" text="Sunflower" />
+                        <MenuItem fx:id="apple" mnemonicParsing="false" onAction="#selectApple" text="Apple" />
+                      <MenuItem mnemonicParsing="false" onAction="#selectTomato" text="Tomato" />
+                    </items>
+                  </MenuButton>
+                  <Button fx:id="seedSubmit" mnemonicParsing="false" onAction="#submitSeed" text="Submit" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="90.0" prefHeight="0.0" prefWidth="200.0" spacing="26.0">
+               <children>
+                  <Label fx:id="name_id11" text="Choose a Season!" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <MenuButton fx:id="menuButtonSea" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="150.0" text="Choose a Season" textAlignment="CENTER" translateX="6.0">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#selectSummer" text="Summer" />
+                        <MenuItem fx:id="fall" mnemonicParsing="false" onAction="#selectFall" text="Fall" />
+                        <MenuItem mnemonicParsing="false" onAction="#selectWinter" text="Winter" />
+                        <MenuItem mnemonicParsing="false" onAction="#selectSpring" text="Spring" />
+                     </items>
+                  </MenuButton>
+                  <Button fx:id="seasonSubmit" mnemonicParsing="false" onAction="#submitSeason" text="Submit" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <Button fx:id="continueButton" mnemonicParsing="false" onAction="#changeScreenButtonToUI" prefWidth="10000.0" text="Continue to your Farm!" translateY="40.0" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</GridPane>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="400" prefWidth="1000" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farmui.controllers.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <VBox prefHeight="400" prefWidth="1000">
+         <children>
+            <HBox prefHeight="406.0" prefWidth="500.0" spacing="20.0">
+               <children>
+                  <GridPane alignment="TOP_CENTER" gridLinesVisible="true" prefHeight="406.0" prefWidth="504.0" style="-fx-background-color: GREEN;" translateX="10.0" translateY="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox prefHeight="82.0" prefWidth="289.0">
+                           <children>
+                              <Button fx:id="plot1" mnemonicParsing="false" onAction="#plotAction1" text="Button" />
+                              <Button fx:id="pest1" mnemonicParsing="false" onAction="#applyPest1" text="P" />
+                              <Button fx:id="fert1" mnemonicParsing="false" onAction="#applyFert1" text="F" />
+                              <Label fx:id="water1" text="Label" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Button fx:id="plot2" mnemonicParsing="false" onAction="#plotAction2" text="Button" />
+                              <Button fx:id="pest2" mnemonicParsing="false" onAction="#applyPest2" text="P" />
+                              <Button fx:id="fert2" mnemonicParsing="false" onAction="#applyFert2" text="F" />
+                              <Label fx:id="water2" text="Label" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="81.0" prefWidth="175.0" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="plot3" mnemonicParsing="false" onAction="#plotAction3" text="Button" />
+                              <Button fx:id="pest3" mnemonicParsing="false" onAction="#applyPest3" text="P" />
+                              <Button fx:id="fert3" mnemonicParsing="false" onAction="#applyFert3" text="F" />
+                              <Label fx:id="water3" text="Label" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="plot4" mnemonicParsing="false" onAction="#plotAction4" text="Button" />
+                              <Button fx:id="pest4" mnemonicParsing="false" onAction="#applyPest4" text="P" />
+                              <Button fx:id="fert4" mnemonicParsing="false" onAction="#applyFert4" text="F" />
+                              <Label fx:id="water4" text="Label" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <Button fx:id="plot5" mnemonicParsing="false" onAction="#plotAction5" text="Button" />
+                              <Button fx:id="pest5" mnemonicParsing="false" onAction="#applyPest5" text="P" />
+                              <Button fx:id="fert5" mnemonicParsing="false" onAction="#applyFert5" text="F" />
+                              <Label fx:id="water5" text="Label" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Button fx:id="plot6" mnemonicParsing="false" onAction="#plotAction6" text="Button" />
+                              <Button fx:id="pest6" mnemonicParsing="false" onAction="#applyPest6" text="P" />
+                              <Button fx:id="fert6" mnemonicParsing="false" onAction="#applyFert6" text="F" />
+                              <Label fx:id="water6" text="Label" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <children>
+                              <Button fx:id="plot7" mnemonicParsing="false" onAction="#plotAction7" text="Button" />
+                              <Button fx:id="pest7" mnemonicParsing="false" onAction="#applyPest7" text="P" />
+                              <Button fx:id="fert7" mnemonicParsing="false" onAction="#applyFert7" text="F" />
+                              <Label fx:id="water7" text="Label" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Button fx:id="plot8" mnemonicParsing="false" onAction="#plotAction8" text="Button" />
+                              <Button fx:id="pest8" mnemonicParsing="false" onAction="#applyPest8" text="P" />
+                              <Button fx:id="fert8" mnemonicParsing="false" onAction="#applyFert8" text="F" />
+                              <Label fx:id="water8" text="Label" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                           <children>
+                              <Button fx:id="plot9" mnemonicParsing="false" onAction="#plotAction9" text="Button" />
+                              <Button fx:id="pest9" mnemonicParsing="false" onAction="#applyPest9" text="P" />
+                              <Button fx:id="fert9" mnemonicParsing="false" onAction="#applyFert9" text="F" />
+                              <Label fx:id="water9" text="Label" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <Button fx:id="plot10" mnemonicParsing="false" onAction="#plotAction10" text="Button" />
+                              <Button mnemonicParsing="false" onAction="#applyPest10" text="P" />
+                              <Button fx:id="fert10" mnemonicParsing="false" onAction="#applyFert10" text="F" />
+                              <Label fx:id="water10" text="Label" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                        <StackPane fx:id="SP1" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="plot11" mnemonicParsing="false" onAction="#plotAction11" text="Button" />
+                                    <Button fx:id="pest11" mnemonicParsing="false" onAction="#applyPest11" text="P" />
+                                    <Button fx:id="fert11" mnemonicParsing="false" onAction="#applyFert11" text="F" />
+                                    <Label fx:id="water11" text="Label" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                              <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="80.0" stroke="BLACK" strokeType="INSIDE" width="168.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="SP2" layoutX="346.0" layoutY="7.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="plot12" mnemonicParsing="false" onAction="#plotAction12" text="Button" />
+                                    <Button fx:id="pest12" mnemonicParsing="false" onAction="#applyPest12" text="P" />
+                                    <Button fx:id="fert12" mnemonicParsing="false" onAction="#applyFert12" text="F" />
+                                    <Label fx:id="water12" text="Label" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                              <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="80.0" stroke="BLACK" strokeType="INSIDE" width="168.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="SP3" layoutX="346.0" layoutY="83.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="plot13" mnemonicParsing="false" onAction="#plotAction13" text="Button" />
+                                    <Button fx:id="pest13" mnemonicParsing="false" onAction="#applyPest13" text="P" />
+                                    <Button fx:id="fert13" mnemonicParsing="false" onAction="#applyFert13" text="F" />
+                                    <Label fx:id="water13" text="Label" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                              <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="80.0" stroke="BLACK" strokeType="INSIDE" width="168.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="SP4" layoutX="346.0" layoutY="157.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="plot14" mnemonicParsing="false" onAction="#plotAction14" text="Button" />
+                                    <Button fx:id="pest14" mnemonicParsing="false" onAction="#applyPest14" text="P" />
+                                    <Button fx:id="fert14" mnemonicParsing="false" onAction="#applyFert14" text="F" />
+                                    <Label fx:id="water14" text="Label" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                              <Rectangle fx:id="rect4" arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="80.0" stroke="BLACK" strokeType="INSIDE" width="168.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="plot15" mnemonicParsing="false" onAction="#plotAction15" text="Button" />
+                                    <Button fx:id="pest15" mnemonicParsing="false" onAction="#applyPest15" text="P" />
+                                    <Button fx:id="fert15" mnemonicParsing="false" onAction="#applyFert15" text="F" />
+                                    <Label fx:id="water15" text="Label" />
+                                 </children>
+                              </HBox>
+                              <Rectangle fx:id="rect5" arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="80.0" stroke="BLACK" strokeType="INSIDE" width="168.0" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </GridPane>
+                  <VBox prefHeight="406.0" prefWidth="240.0">
+                     <children>
+                        <Label fx:id="nameLabel" prefHeight="33.0" prefWidth="127.0" text="Name" />
+                        <HBox prefHeight="39.0" prefWidth="127.0">
+                           <children>
+                              <Label prefHeight="107.0" prefWidth="63.0" text="Money:" />
+                              <Label fx:id="moneyLabel" prefHeight="137.0" prefWidth="66.0" text="0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="43.0" prefWidth="127.0">
+                           <children>
+                              <Label prefHeight="35.0" prefWidth="103.0" text="Crops Harvested:" />
+                              <Label fx:id="harvestedLabel" prefHeight="42.0" prefWidth="27.0" text="0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="46.0" prefWidth="127.0">
+                           <children>
+                              <Label prefHeight="55.0" prefWidth="65.0" text="Date:" />
+                              <Label fx:id="dateLabel" prefHeight="59.0" prefWidth="81.0" text="Day 0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="34.0" prefWidth="127.0">
+                           <children>
+                              <Label prefHeight="35.0" prefWidth="69.0" text="Difficulty:" />
+                              <Label fx:id="difficultyLabel" prefHeight="32.0" prefWidth="82.0" text="Easy" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="45.0" prefWidth="127.0">
+                           <children>
+                              <Label prefHeight="54.0" prefWidth="61.0" text="Season:" />
+                              <Label fx:id="seasonLabel" prefHeight="41.0" prefWidth="77.0" text="Winter" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="43.0" prefWidth="79.0" text="Seed Type:" />
+                              <Label fx:id="seedLabel" prefHeight="45.0" prefWidth="63.0" text="Apple" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="43.0" prefWidth="240.0">
+                           <children>
+                              <Label prefHeight="44.0" prefWidth="71.0" text="Plot Cost:" />
+                              <Label fx:id="plotCost" prefHeight="40.0" prefWidth="55.0" text="0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="61.0" prefWidth="500.0" spacing="10.0">
+               <children>
+                  <Button fx:id="marketButton" mnemonicParsing="false" onAction="#pressMarket" text="Market" />
+                  <Button fx:id="harvestButton" mnemonicParsing="false" onAction="#harvest" text="Harvest!" />
+                  <Button fx:id="inventoryButton" layoutX="84.0" layoutY="25.0" mnemonicParsing="false" onAction="#pressInventory" text="Inventory" />
+                  <Button fx:id="timeButton" mnemonicParsing="false" onAction="#advanceTime" text="Advance Time" />
+                  <Button fx:id="purchasePlot" mnemonicParsing="false" onAction="#purchasePlot" text="Purchase Plot" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.85" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farmui.controllers.ControllerWinScreen">
+    <children>
+        <SplitPane dividerPositions="0.11306532663316583" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #0025ff;">
+                    <children>
+                        <Label fx:id="welcomeLabel" layoutX="243.0" layoutY="7.0" prefHeight="27.0" prefWidth="303.0" text="YOU WIN CONGRATULATIONS" underline="true">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font></Label>
+                    </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <ImageView fx:id="button" fitHeight="350.0" fitWidth="898.0" layoutX="-3.0" pickOnBounds="true">
+                            <image>
+                                <Image url="@../eg.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</StackPane>

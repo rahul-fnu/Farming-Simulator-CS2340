@@ -1,0 +1,31 @@
+id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+}
+dependencies {
+    compile 'junit:junit:4.12'
+    testCompile "junit:junit:4.13-beta-3"
+    testCompile "org.testfx:testfx-junit:4.0.16-alpha"
+}
+plugins {
+    id("org.openjfx.javafxplugin") version "0.0.9"
+}
+javafx {
+    sdk = "/Users/ishan/javafx-sdk-11.0.2/lib"
+    modules("javafx.controls", "javafx.fxml")
+}
+testCompile group: 'org.hamcrest', name: 'hamcrest', version: '2.1'
+
+test { ignoreFailures = true }

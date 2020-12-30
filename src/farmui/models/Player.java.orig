@@ -1,0 +1,342 @@
+package farmui.models;
+import java.util.ArrayList;
+
+/**
+ * Player object representation.
+ */
+public class Player {
+    private String name;
+    private double money;
+    private int cropsHarvested;
+    private String date;
+    private int farmPlots;
+    private PlayerSettings settings;
+    private Plant[] plantArray;
+    private ArrayList<Plant> inventory;
+    private ArrayList<Pesticide> stock;
+    private ArrayList<Fertilizer> fertilizers;
+    private int plantArrayLength;
+    private int inventoryLength;
+    private int day;
+<<<<<<< HEAD
+    private int maxPlants = 10;
+=======
+    private int counterW;
+
+
+>>>>>>> FarmIrrigation
+
+    /**
+     * Constructor that initializes the Player object.
+     * @param name String that represents the name of the player.
+     * @param money Double that represents the money of the player.
+     * @param cropsHarvested Int that represents the number of crops harvested.
+     * @param date String that represents the date.
+     * @param farmPlots Int that represents the number of farmplots the Player has.
+     * @param settings PlayerSettings object that represents the settings for the Player.
+     */
+    public Player(String name, double money, int cropsHarvested, String date,
+                  int farmPlots, PlayerSettings settings) {
+        this.name = name;
+        this.money = money;
+        this.cropsHarvested = cropsHarvested;
+        this.date = date;
+        this.farmPlots = farmPlots;
+        this.settings = settings;
+        this.plantArray = new Plant[15];
+        this.inventory = new ArrayList<Plant>();
+        this.stock = new ArrayList<Pesticide>();
+        this.fertilizers = new ArrayList<Fertilizer>();
+        this.plantArrayLength = 0;
+        this.inventoryLength = 0;
+        this.day = 1;
+<<<<<<< HEAD
+        this.maxPlants = 10;
+=======
+        this.counterW = 0;
+>>>>>>> FarmIrrigation
+    }
+
+    /**
+     * No args constructor for the Player object.
+     */
+    public Player() {
+        this.name = "Player";
+        this.money = 0.0;
+        this.cropsHarvested = 0;
+        this.date = "Day 1";
+        this.farmPlots = 0;
+        this.settings = new PlayerSettings();
+        this.plantArray = new Plant[15];
+        this.inventory = new ArrayList<>();
+        this.stock = new ArrayList<>();
+        this.fertilizers = new ArrayList<>();
+        this.plantArrayLength = 0;
+<<<<<<< HEAD
+        this.maxPlants = 10;
+=======
+        this.counterW = 0;
+>>>>>>> FarmIrrigation
+    }
+
+    /**
+     * Alternate constructor for Player object.
+     * @param name String that represents the name of the Player.
+     */
+    public Player(String name) {
+        this();
+        this.name = name;
+    }
+    public void evaluatePlantArray() {
+        for (int plot = 0; plot < this.plantArray.length; plot++) {
+            if (this.plantArray[plot] != null) {
+                Plant plant = this.plantArray[plot];
+                if (plant.getStatus() == PlantStatus.DEAD_PLANT) {
+                    this.plantArray[plot] = null;
+                }
+                plant.evaluateStatus();
+                if (plant.getStatus() == PlantStatus.DEAD_PLANT) {
+                    plant.setWaterLevel(0);
+                }
+            }
+        }
+    }
+
+    /**
+     * add plant to plantarray
+     * @param plant plant to add to array
+     * @return whether or not the plant was added
+     */
+    public String addToPlantArray(Plant plant) {
+        if (this.plantArrayLength == maxPlants) {
+            return "full";
+        } else {
+            this.plantArray[plantArrayLength] = plant;
+            plantArrayLength++;
+            return "success";
+        }
+    }
+
+    /**
+     * get first seed
+     * @return seed
+     */
+    public Plant findFirstSeed() {
+        for (Plant plant : inventory) {
+            if (plant.getStatus() == PlantStatus.SEED) {
+                Plant temp = plant;
+                inventory.remove(plant);
+                return temp;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * add plant to inventory
+     * @param plant plant to add to arraylist
+     * 
+     */
+    public void harvest(Plant plant) {
+        if (inventory.size() != 10) {
+            inventory.add(plant);
+            // if plant is fertilized, then there is a chance of increasing yield
+            if (plant.getFert() > 0) {
+                double rand = Math.random();
+                if (inventory.size() != 10 && rand >= 0.5) {
+                    inventory.add(plant);
+                }
+            }
+        } else {
+            System.out.println("Inventory is full!");
+        }
+    }
+
+    /**
+     * method to get name of player
+     * @return name of player
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * method to get money of player
+     * @return money of player
+     */
+    public double getMoney() {
+        return money;
+    }
+
+    /**
+     * method to get crops harvested of player
+     * @return crops harvested of player
+     */
+    public int getCropsHarvested() {
+        return cropsHarvested;
+    }
+
+    /**
+     * method to get date of player
+     * @return date of player
+     */
+    public String getDate() {
+        return date;
+    }
+
+    /**
+     * method to get farm plots of player
+     * @return farm plots of player
+     */
+    public int getFarmPlots() {
+        return farmPlots;
+    }
+
+    /**
+     * method to get settings of player
+     * @return settings of player
+     */
+    public PlayerSettings getSettings() {
+        return settings;
+    }
+
+    /**
+     * set new name of player
+     * @param name new name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * set new money of player
+     * @param money new money
+     */
+    public void setMoney(double money) {
+        this.money = money;
+    }
+
+    /**
+     * set new crops harvested of player
+     * @param cropsHarvested new crops harvested
+     */
+    public void setCropsHarvested(int cropsHarvested) {
+        this.cropsHarvested = cropsHarvested;
+    }
+
+    /**
+     * set new date of player
+     * @param date new date
+     */
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    /**
+     * set new farm plots of player
+     * @param farmPlots new farm plots
+     */
+    public void setFarmPlots(int farmPlots) {
+        this.farmPlots = farmPlots;
+    }
+
+    /**
+     * set new settings of player
+     * @param settings new settings
+     */
+    public void setSettings(PlayerSettings settings) {
+        this.settings = settings;
+    }
+
+    /**
+     * get crops of player
+     * @return player plant array
+     */
+    public Plant[] getPlantArray() {
+        return plantArray;
+    }
+
+    /**
+     * sets crops of player
+     * @param plantArray plant array to set
+     */
+    public void setPlantArray(Plant[] plantArray) {
+        this.plantArray = plantArray;
+    }
+
+    /**
+     * get user inventory
+     * @return player inventory arraylist
+     */
+    public ArrayList<Plant> getInventory() {
+        return inventory;
+    }
+
+    public ArrayList<Pesticide> getStock() { 
+        return stock; 
+    }
+
+    /**
+     * set user inventory
+     * @param inventory player inventory to be set
+     */
+    public void setInventory(ArrayList<Plant> inventory) {
+        this.inventory = inventory;
+    }
+
+    public int getPlantArrayLength() {
+        return plantArrayLength;
+    }
+
+    public void setPlantArrayLength(int plantArrayLength) {
+        this.plantArrayLength = plantArrayLength;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public ArrayList<Fertilizer> getFertilizers() {
+        return fertilizers;
+    }
+<<<<<<< HEAD
+
+    public void setStock(ArrayList<Pesticide> stock) {
+        this.stock = stock;
+    }
+
+    public void setFertilizers(ArrayList<Fertilizer> fertilizers) {
+        this.fertilizers = fertilizers;
+    }
+
+    public int getInventoryLength() {
+        return inventoryLength;
+    }
+
+    public void setInventoryLength(int inventoryLength) {
+        this.inventoryLength = inventoryLength;
+    }
+
+    public int getMaxPlants() {
+        return maxPlants;
+    }
+
+    public void setMaxPlants(int maxPlants) {
+        this.maxPlants = maxPlants;
+    }
+=======
+    public int getCounterW() {
+        return counterW;
+    }
+
+    public void setCounterW(int counterW) {
+        this.counterW = counterW;
+    }
+
+>>>>>>> FarmIrrigation
+}
+

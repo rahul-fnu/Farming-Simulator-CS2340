@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.85" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farmui.controllers.ControllerInventory">
+    <children>
+        <SplitPane dividerPositions="0.11306532663316583" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: DEEPSKYBLUE;">
+                    <children>
+                        <Label fx:id="welcomeLabel" contentDisplay="CENTER" layoutX="212.0" layoutY="7.0" prefHeight="27.0" prefWidth="185.0" text="Inventory" textAlignment="CENTER" translateX="40.0" underline="true">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font></Label>
+                    </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <ImageView fx:id="button" fitHeight="404.0" fitWidth="612.0" opacity="0.66" pickOnBounds="true">
+                            <image>
+                                <Image url="@../ig.jpg" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="returnFarm" layoutX="351.0" layoutY="302.0" mnemonicParsing="false" onAction="#changeReturnButtonPushed" prefHeight="34.0" prefWidth="142.0" text="Return to Farm" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="300.0" layoutX="206.0" layoutY="-11.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="5.0" layoutX="14.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" width="583.0" />
+                  <Label layoutX="80.0" layoutY="-3.0" text="Seeds">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="452.0" layoutY="-1.0" text="Crops">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="seed1" layoutX="26.0" layoutY="45.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="seed2" layoutX="33.0" layoutY="88.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="seed3" layoutX="33.0" layoutY="124.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="seed4" layoutX="33.0" layoutY="162.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="seed5" layoutX="33.0" layoutY="202.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="crop1" layoutX="412.0" layoutY="45.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="crop2" layoutX="412.0" layoutY="88.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="crop3" layoutX="412.0" layoutY="131.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="crop4" layoutX="412.0" layoutY="177.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="crop5" layoutX="412.0" layoutY="217.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="marketButton" layoutX="80.0" layoutY="302.0" mnemonicParsing="false" onAction="#pressMarket" prefHeight="34.0" prefWidth="142.0" text="Return to Market" />
+                  <Label fx:id="seed6" layoutX="121.0" layoutY="45.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="seed7" layoutX="121.0" layoutY="88.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="seed8" layoutX="121.0" layoutY="124.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="seed9" layoutX="121.0" layoutY="162.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="seed10" layoutX="121.0" layoutY="202.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="crop6" layoutX="506.0" layoutY="45.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="crop7" layoutX="506.0" layoutY="88.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="crop8" layoutX="506.0" layoutY="131.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="crop9" layoutX="506.0" layoutY="177.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="crop10" layoutX="506.0" layoutY="217.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00060b" height="291.0" layoutX="384.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+                  <Label layoutX="253.0" layoutY="-3.0" text="Pesticides">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pest1" layoutX="223.0" layoutY="45.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pest6" layoutX="307.0" layoutY="45.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pest2" layoutX="223.0" layoutY="88.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pest7" layoutX="307.0" layoutY="88.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pest3" layoutX="223.0" layoutY="124.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pest4" layoutX="223.0" layoutY="162.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pest5" layoutX="224.0" layoutY="204.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pest8" layoutX="307.0" layoutY="124.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pest9" layoutX="307.0" layoutY="162.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pest10" layoutX="308.0" layoutY="203.0" text="Empty">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</StackPane>
